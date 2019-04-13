@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { compose, bindActionCreators } from 'redux';
+import { Redirect } from 'react-router-dom';
 import uuid from 'uuid';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -42,7 +43,6 @@ class ReminderForm extends Component {
 
   componentDidMount() {
     const {data, reminderId} = this.props;
-    console.log(this.props);
 
     if(!reminderId) {
       this.setState({
@@ -69,6 +69,7 @@ class ReminderForm extends Component {
       'title': titleValue,
       'id': uuid.v4(),
     });
+    return (<Redirect to="/reminders" />);
   }
 
   handleTitleChange(event) {
@@ -136,6 +137,8 @@ class ReminderForm extends Component {
 };
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps);
+
   return {
     'data': state.reminder.list || [],
     // 'reminderId': ownProps.params.id || null,
@@ -152,6 +155,6 @@ export default compose(
   connect(
     mapStateToProps,
     mapDispatchToProps),
-    withStyles(styles)
+    withStyles(styles),
   )(ReminderForm);
 

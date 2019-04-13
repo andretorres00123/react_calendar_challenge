@@ -3,17 +3,6 @@ import initialState from './initialState';
 
 const reminderReducer = (state = initialState.reminder, action) => {
   switch(action.type) {
-    case types.LOAD_REMINDER_SUCCESS:
-      return {
-        ...state,
-        'list': action.news,
-        'loading': false,
-      };
-    case types.LOAD_REMINDER_REQUEST:
-      return {
-        ...state,
-        'loading': true,
-      };
     case types.CREATE_NEW_REMINDER_SUCCESS:
       return {
         ...state,
@@ -28,13 +17,11 @@ const reminderReducer = (state = initialState.reminder, action) => {
           },
         ],
       };
-    case 'CREATE_NEW':
-    return [
+    case types.CLEAN_REMINDER:
+    return {
       ...state,
-      {
-        ...action.new,
-      }
-    ];
+      'list': [],
+    };
     default:
       return state;
   }

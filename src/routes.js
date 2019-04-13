@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from './Hoc/Layout';
 import { Switch } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Home from './components/home';
 import ReminderList from './components/admin';
 import ReminderEdit from './components/reminder';
@@ -20,4 +20,4 @@ const Routes = (props) => {
   );
 };
 
-export default Routes;
+export default withRouter(Routes);
