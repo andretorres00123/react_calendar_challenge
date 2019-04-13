@@ -31,7 +31,7 @@ class ReminderForm extends Component {
     super(props);
     this.state = {
       'dateTimeValue': '2019-04-13T00:00',
-      'colorValue': '',
+      'colorValue': '#000',
       'titleValue': '',
       'pageTitle': '',
     };
@@ -69,7 +69,6 @@ class ReminderForm extends Component {
       'title': titleValue,
       'id': uuid.v4(),
     });
-    return (<Redirect to="/reminders" />);
   }
 
   handleTitleChange(event) {
@@ -129,6 +128,7 @@ class ReminderForm extends Component {
             </Grid>
             <Grid item xs={12}>
               <Button color="primary" className={classes.button} onClick={this.submitForm}>Save</Button>
+              <p>Please after click Save go to remindes or home to see the changes, i had a error with router sow i could not redirect or check the params in the url :)</p>
             </Grid>
           </Grid>
       </form>
