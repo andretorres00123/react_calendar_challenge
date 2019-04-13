@@ -1,0 +1,21 @@
+.navbar-header {
+    button {
+        :hover {
+            background-color: dimgray;
+            color: #799900;
+            border-radius: 3px;
+            padding: 5px;
+        }
+    }
+}
+
+.footer-wrapper{
+    height: 450px;
+    .footer_img {
+        margin-top: 300px;
+    }
+    .footer_text {
+        color: white;
+        font-size: 20px;
+    }
+}
