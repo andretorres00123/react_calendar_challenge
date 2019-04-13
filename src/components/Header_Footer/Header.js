@@ -20,6 +20,9 @@ class Header extends Component {
           <Link to="/home">
             <Button style={{'color': '#8c888b'}}>Home</Button>
           </Link>
+          <Link to="/reminders">
+            <Button style={{'color': '#8c888b'}}>Reminder</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     )
