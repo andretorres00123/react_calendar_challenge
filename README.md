@@ -1,11 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello.
 
-This project is part of a Recluitment Challenge made by Jobsity.
 My name is Andre Torres
 
 First clone the repository
 
-## `git clone https://github.com/andretorres00123/react_calendar_challenge.git`
+# `git clone https://github.com/andretorres00123/react_calendar_challenge.git`
 
 then enter to de repository
 
