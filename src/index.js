@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import configureStore from './redux/configureStore';
 import Routes from './routes';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
+import './index.css';
 
 
 const store = configureStore();

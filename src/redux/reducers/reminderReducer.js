@@ -14,17 +14,18 @@ const reminderReducer = (state = initialState.reminder, action) => {
         ...state,
         'loading': true,
       };
-    case types.LOAD_IMAGE_SUCESS:
-      const newsIndex = state.list.findIndex((news) => news.id === action.id);
+    case types.CREATE_NEW_REMINDER_SUCCESS:
       return {
         ...state,
         'list': [
-          ...state.list.slice(0, newsIndex),
+          ...state.list,
           {
-            ...state.list[newsIndex],
-            'image': action.url,
+            'id': action.newReminder.id,
+            'startDate':action.newReminder.startDate,
+            'endDate': action.newReminder.endDate,
+            'title': action.newReminder.title,
+            'color': action.newReminder.color,
           },
-          ...state.list.slice(newsIndex + 1),
         ],
       };
     case 'CREATE_NEW':

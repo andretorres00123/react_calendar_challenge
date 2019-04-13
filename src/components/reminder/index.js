@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Calendar from '../calendar';
-import './_Home.scss';
+import ReminderForm from './form';
+import './_Reminder.scss';
 
-class Home extends Component {
+class Reminder extends Component {
   render() {
     return (
-      <div className="home-wrapper">
+      <div className="reminder-wrapper">
         <Grid container justify="center">
           <Grid item xs={12} md={10}>
-            <h1>Dashboard</h1>
+            <h1>New Reminder</h1>
           </Grid>
           <Grid item xs={12} md={10}>
-            <Calendar />
+            <ReminderForm />
           </Grid>
         </Grid>
       </div>
@@ -20,4 +20,4 @@ class Home extends Component {
   }
 };
 
-export default Home;
+export default Reminder;
